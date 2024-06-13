@@ -1,0 +1,22 @@
+{
+  "name": "employee-management-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.7.13",
+    "grpc": "^1.24.11",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

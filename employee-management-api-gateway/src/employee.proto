@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+service EmployeeService {
+  rpc GetEmployees (Empty) returns (EmployeeList);
+  rpc GetEmployee (EmployeeId) returns (Employee);
+  rpc AddEmployee (Employee) returns (Employee);
+  rpc UpdateEmployee (Employee) returns (Employee);
+  rpc DeleteEmployee (EmployeeId) returns (Success);
+}
+
+message Employee {
+  int32 id = 1;
+  string name = 2;
+  string position = 3;
+  string department = 4;
+}
+
+message EmployeeId {
+  int32 id = 1;
+}
+
+message EmployeeList {
+  repeated Employee employees = 1;
+}
+
+message Empty {}
+
+message Success {
+  bool success = 1;
+}
